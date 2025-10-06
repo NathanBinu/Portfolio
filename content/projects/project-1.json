@@ -1,0 +1,13 @@
+{
+  "slug": "modern-ecommerce-platform",
+  "title": "Modern E-commerce Platform",
+  "description": "A full-stack e-commerce solution built with Next.js, featuring real-time inventory, payment processing, and admin dashboard.",
+  "longDescription": "This comprehensive e-commerce platform demonstrates modern web development practices with a focus on performance, user experience, and scalability. Built with Next.js 14, it features server-side rendering, optimistic UI updates, and a robust admin panel for inventory management.",
+  "image": "/placeholder.svg?height=400&width=600",
+  "technologies": ["Next.js", "TypeScript", "Tailwind CSS", "Prisma", "PostgreSQL", "Stripe"],
+  "category": "Full Stack",
+  "featured": true,
+  "githubUrl": "https://github.com/username/ecommerce-platform",
+  "liveUrl": "https://ecommerce-demo.vercel.app",
+  "completedAt": "2024-03-15"
+}

@@ -1,0 +1,14 @@
+{
+  "slug": "getting-started-with-nextjs",
+  "title": "Getting Started with Next.js 14: A Complete Guide",
+  "description": "Learn the fundamentals of Next.js 14, including the new App Router, Server Components, and modern development practices.",
+  "content": "Next.js 14 introduces powerful new features that make building React applications more efficient and performant. In this comprehensive guide, we'll explore the App Router, Server Components, and how to leverage these tools for modern web development...",
+  "publishedAt": "2024-03-10T10:00:00Z",
+  "updatedAt": "2024-03-10T10:00:00Z",
+  "author": "Portfolio Owner",
+  "tags": ["Next.js", "React", "Web Development", "Tutorial"],
+  "category": "Tutorial",
+  "featured": true,
+  "readingTime": 8,
+  "image": "/placeholder.svg?height=400&width=800"
+}

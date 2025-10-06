@@ -1,0 +1,83 @@
+{
+  "positions": [
+    {
+      "id": "senior-developer",
+      "title": "Senior Full Stack Developer",
+      "company": "Tech Innovations Inc.",
+      "location": "San Francisco, CA",
+      "type": "Full-time",
+      "startDate": "2022-06-01",
+      "endDate": null,
+      "current": true,
+      "description": "Lead development of scalable web applications serving 100K+ users. Architect and implement microservices infrastructure, mentor junior developers, and drive technical decision-making for product roadmap.",
+      "achievements": [
+        "Reduced application load time by 40% through performance optimization",
+        "Led migration to microservices architecture, improving system reliability",
+        "Mentored 5 junior developers, with 3 receiving promotions",
+        "Implemented CI/CD pipeline reducing deployment time by 60%"
+      ],
+      "technologies": ["Next.js", "TypeScript", "AWS", "Docker", "PostgreSQL", "Redis"]
+    },
+    {
+      "id": "fullstack-developer",
+      "title": "Full Stack Developer",
+      "company": "Digital Solutions Co.",
+      "location": "Remote",
+      "type": "Full-time",
+      "startDate": "2020-03-01",
+      "endDate": "2022-05-31",
+      "current": false,
+      "description": "Developed and maintained multiple client projects ranging from e-commerce platforms to SaaS applications. Collaborated with design and product teams to deliver high-quality user experiences.",
+      "achievements": [
+        "Built 12+ production applications with 99.9% uptime",
+        "Implemented automated testing reducing bugs by 50%",
+        "Optimized database queries improving response times by 35%",
+        "Led frontend architecture decisions for 3 major projects"
+      ],
+      "technologies": ["React", "Node.js", "MongoDB", "GraphQL", "Tailwind CSS", "Jest"]
+    },
+    {
+      "id": "frontend-developer",
+      "title": "Frontend Developer",
+      "company": "Creative Agency Ltd.",
+      "location": "New York, NY",
+      "type": "Full-time",
+      "startDate": "2018-09-01",
+      "endDate": "2020-02-28",
+      "current": false,
+      "description": "Specialized in creating responsive, accessible web interfaces for diverse clients. Worked closely with designers to implement pixel-perfect designs and ensure optimal user experience across all devices.",
+      "achievements": [
+        "Delivered 25+ responsive websites with 100% client satisfaction",
+        "Improved accessibility scores to AA compliance for all projects",
+        "Reduced development time by 30% through component library creation",
+        "Trained team on modern CSS techniques and best practices"
+      ],
+      "technologies": ["HTML5", "CSS3", "JavaScript", "Vue.js", "Sass", "Webpack"]
+    }
+  ],
+  "education": [
+    {
+      "id": "computer-science-degree",
+      "degree": "Bachelor of Science in Computer Science",
+      "institution": "University of Technology",
+      "location": "Boston, MA",
+      "startDate": "2014-09-01",
+      "endDate": "2018-05-31",
+      "gpa": "3.8",
+      "honors": ["Magna Cum Laude", "Dean's List (6 semesters)"],
+      "relevantCourses": [
+        "Data Structures and Algorithms",
+        "Software Engineering",
+        "Database Systems",
+        "Web Development",
+        "Machine Learning"
+      ]
+    }
+  ],
+  "skills": {
+    "frontend": ["react", "Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "Vue.js"],
+    "backend": ["Node.js", "Python", "PostgreSQL", "MongoDB", "GraphQL", "REST APIs"],
+    "tools": ["Git", "Docker", "AWS", "Vercel", "Figma", "Jest", "Cypress"],
+    "concepts": ["Responsive Design", "Accessibility", "Performance Optimization", "SEO", "Agile/Scrum"]
+  }
+}

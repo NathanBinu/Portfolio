@@ -1,0 +1,13 @@
+{
+  "slug": "ai-powered-dashboard",
+  "title": "AI-Powered Analytics Dashboard",
+  "description": "Interactive dashboard with AI-driven insights, real-time data visualization, and predictive analytics.",
+  "longDescription": "An advanced analytics dashboard that leverages machine learning to provide actionable business insights. Features include real-time data processing, interactive charts, and AI-powered recommendations for business optimization.",
+  "image": "/placeholder.svg?height=400&width=600",
+  "technologies": ["React", "D3.js", "Python", "FastAPI", "TensorFlow", "PostgreSQL"],
+  "category": "Data Science",
+  "featured": true,
+  "githubUrl": "https://github.com/username/ai-dashboard",
+  "liveUrl": "https://ai-dashboard-demo.vercel.app",
+  "completedAt": "2024-02-20"
+}

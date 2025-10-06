@@ -1,0 +1,13 @@
+{
+  "slug": "mobile-fitness-app",
+  "title": "Mobile Fitness Tracker",
+  "description": "Cross-platform mobile app for fitness tracking with social features and personalized workout plans.",
+  "longDescription": "A comprehensive fitness tracking application built with React Native, featuring workout planning, progress tracking, social challenges, and integration with wearable devices. Includes offline functionality and real-time synchronization.",
+  "image": "/placeholder.svg?height=400&width=600",
+  "technologies": ["React Native", "Expo", "Node.js", "MongoDB", "Socket.io", "Redux"],
+  "category": "Mobile",
+  "featured": false,
+  "githubUrl": "https://github.com/username/fitness-tracker",
+  "liveUrl": "https://fitness-app-demo.com",
+  "completedAt": "2024-01-10"
+}

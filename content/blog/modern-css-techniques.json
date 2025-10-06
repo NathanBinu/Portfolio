@@ -1,0 +1,14 @@
+{
+  "slug": "modern-css-techniques",
+  "title": "Modern CSS Techniques Every Developer Should Know",
+  "description": "Explore advanced CSS features like Container Queries, CSS Grid, and modern layout techniques that will improve your web development workflow.",
+  "content": "CSS has evolved significantly in recent years, introducing powerful new features that make creating responsive, maintainable layouts easier than ever. Let's dive into the most important modern CSS techniques...",
+  "publishedAt": "2024-02-25T14:30:00Z",
+  "updatedAt": "2024-02-25T14:30:00Z",
+  "author": "Portfolio Owner",
+  "tags": ["CSS", "Web Development", "Frontend", "Design"],
+  "category": "Technical",
+  "featured": false,
+  "readingTime": 6,
+  "image": "/placeholder.svg?height=400&width=800"
+}
