@@ -1,75 +1,61 @@
 # Nathan Binu Edappilly — Portfolio
 
-A fast, responsive developer portfolio built with **Next.js 15**, **TypeScript**, **Tailwind CSS**, and **shadcn/ui**.  
-It showcases projects, experience, skills, and includes a production-ready contact form that sends emails via **Resend**.
-
----
+A fast, responsive developer portfolio built with Next.js 15, TypeScript, Tailwind CSS, and shadcn/ui.
+It showcases projects, experience, skills, and includes a production-ready contact form that sends emails via Resend.
 
 ## ✨ Features
 
-- Modern **App Router** (Next.js 15) with static generation & dynamic routes (`/projects/[slug]`)
+- Modern App Router (Next.js 15) with static generation & dynamic routes (`/projects/[slug]`)
 - Responsive layout, dark/light theme toggle, and subtle motion/hover effects
-- “Projects” grid with filters + detailed project pages
-- “Experience” timeline with skills & technologies
-- “About” + “Beyond Code” sections
-- **Contact form** with server route (`/api/contact`) using **Resend**
+- "Projects" grid with filters + detailed project pages
+- "Experience" timeline with skills & technologies
+- "About" + "Beyond Code" sections
+- Contact form with server route (`/api/contact`) using Resend
 - Basic SEO + JSON-LD project structured data
-
----
 
 ## 🧰 Tech Stack
 
-- **Framework:** Next.js 15, React 18, TypeScript  
-- **UI:** Tailwind CSS, shadcn/ui (Radix UI), lucide-react  
-- **Email:** Resend (API route)  
-- **Tooling:** PostCSS, ESLint, Prettier
-
----
+- **Framework**: Next.js 15, React 18, TypeScript
+- **UI**: Tailwind CSS, shadcn/ui (Radix UI), lucide-react
+- **Email**: Resend (API route)
+- **Tooling**: PostCSS, ESLint, Prettier
 
 ## 📁 Project Structure (high level)
 
-```txt
+\`\`\`
 app/
-  about/
-    page.tsx
-  contact/
-    page.tsx
-  experience/
-    page.tsx
-  projects/
-    page.tsx
-    [slug]/
-      page.tsx
-  api/
-    contact/
-      route.ts               # Resend email endpoint (server route)
-
+  about/page.tsx
+  contact/page.tsx
+  experience/page.tsx
+  projects/page.tsx
+  projects/[slug]/page.tsx
+  api/contact/route.ts        # Resend email endpoint
 components/
   navigation.tsx
   theme-toggle.tsx
-  ui/                        # shadcn/ui components
-
+  ui/*                        # shadcn/ui components
 lib/
-  content.ts                 # Projects/skills/experience content source
+  content.ts                  # Projects/skills/experience content source
   utils.ts
-
 public/
-  # images, icons, og assets
-
+  images, icons, og assets
 styles/
-  globals.css                # Tailwind entry
-Note: Projects are read from lib/content.ts (and optionally content/projects/*.json if you split them).
-Skills shown on the About/Experience pages are also defined in lib/content.ts.
+  globals.css                 # Tailwind entry
+\`\`\`
 
-🚀 Getting Started
-Prerequisites
-Node.js ≥ 20.19 (recommended)
+**Note**: Projects are read from `lib/content.ts` (and optionally `content/projects/*.json` if you split them).
+Skills shown on the About/Experience pages are also defined in `lib/content.ts`.
 
-npm ≥ 10
+## 🚀 Getting Started
 
-Install & Run
-bash
-Copy code
+### Prerequisites
+
+- Node.js ≥ 20.19 (recommended)
+- npm ≥ 10
+
+### Install & Run
+
+\`\`\`bash
 # install
 npm install
 
@@ -83,13 +69,15 @@ npm start
 # lint / format (optional)
 npm run lint
 npm run format
+\`\`\`
+
 Visit http://localhost:3000.
 
-🔐 Environment Variables
-Create a .env.local in the repo root:
+## 🔐 Environment Variables
 
-bash
-Copy code
+Create a `.env.local` in the repo root:
+
+\`\`\`env
 # Site
 NEXT_PUBLIC_SITE_URL=http://localhost:3000
 
@@ -99,134 +87,56 @@ RESEND_API_KEY=your_resend_api_key
 # Contact settings
 EMAIL_TO=you@example.com
 EMAIL_FROM="Portfolio Contact <noreply@yourdomain.com>"
-Resend note: Free accounts can only send to your own address until you verify a domain.
+\`\`\`
+
+**Important**: Free Resend accounts can only send to your own address until you verify a domain.
 To email other recipients:
 
-Verify a domain in the Resend dashboard
+1. Verify a domain in the Resend dashboard
+2. Change `EMAIL_FROM` to use that domain (e.g., `hello@yourdomain.com`)
 
-Change EMAIL_FROM to use that domain (e.g., hello@yourdomain.com)
+The contact endpoint lives at `app/api/contact/route.ts`.
 
-The contact endpoint lives at app/api/contact/route.ts.
+## ✏️ Customizing Content
 
-🛠️ Customizing Content
-Name/brand (header) → components/navigation.tsx
+- **Name/brand (header)**: `components/navigation.tsx`
+- **Hero / About / Beyond Code**: `app/page.tsx` and `app/about/page.tsx`
+- **Skills/Expertise**: update skill arrays in `lib/content.ts`
+- **Projects list**: add/edit projects in `lib/content.ts`
+  (each item includes `slug`, `title`, `description`, `image`, `technologies`, `category`, `featured`, `githubUrl`, `liveUrl`, `completedAt`, `longDescription`)
+- **Project pages**: `app/projects/[slug]/page.tsx` (statically generated via `generateStaticParams`)
 
-Home + About text → app/page.tsx and app/about/page.tsx
+## 📨 Contact Form (Resend)
 
-Experience timeline → app/experience/page.tsx (reads from lib/content.ts)
+- **UI**: `app/contact/page.tsx`
+- **API**: `app/api/contact/route.ts` (validates form, sends via Resend, returns JSON)
 
-Skills/Expertise chips → arrays in lib/content.ts
+### Dev tips
 
-Projects list → add/update in lib/content.ts
+- Keep `EMAIL_TO` as your own address during testing.
+- If you see a 403 saying you can only send to your own email, verify a domain in Resend and update `EMAIL_FROM`.
 
-Adding a Project
-Add an entry to the projects array in lib/content.ts:
+## 🧪 Notes on Next.js 15
 
-ts
-Copy code
-{
-  slug: "portfolio-website",
-  title: "Portfolio Website",
-  description: "A modern portfolio showcasing projects and experience.",
-  longDescription:
-    "Built with Next.js 15, Tailwind, and shadcn/ui. Includes dynamic project pages and a Resend-powered contact form.",
-  image: "/images/modern-portfolio-website.png",
-  technologies: ["Next.js", "TypeScript", "Tailwind CSS", "shadcn/ui"],
-  category: "Website",
-  featured: true,
-  githubUrl: "https://github.com/yourname/portfolio",
-  liveUrl: "https://your-portfolio.vercel.app",
-  completedAt: "2025-09-01"
-}
-Pages under /projects/[slug] are statically generated by generateStaticParams using the slug values.
+Dynamic route params are async in Next 15.
+You'll see patterns like:
 
-📨 Contact Form (Resend)
-UI: app/contact/page.tsx
-
-API: app/api/contact/route.ts
-
-Validates payload
-
-Sends email via Resend
-
-Responds with JSON
-
-Testing tips
-
-Keep EMAIL_TO set to your own address while testing (required on free Resend accounts).
-
-If you see a 403 like “You can only send testing emails to your own email address…”, verify a domain in Resend and update EMAIL_FROM.
-
-Anti-spam ideas (optional)
-
-Add a hidden honeypot input
-
-Rate-limit the route
-
-Use simple server-side validation (already included)
-
-🔎 Notes on Next.js 15 Dynamic Params
-In Next 15, route params are async. Example:
-
-ts
-Copy code
-export default async function ProjectPage({
-  params,
-}: { params: Promise<{ slug: string }> }) {
+\`\`\`tsx
+export default async function Page({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params
   // ...
 }
+\`\`\`
 
-export async function generateMetadata({
-  params,
-}: { params: Promise<{ slug: string }> }) {
-  const { slug } = await params
-  // ...
-}
-Apply the same pattern anywhere you read dynamic params.
+…and the same in `generateMetadata`.
 
-☁️ Deployment (Vercel)
-Push the repo to GitHub (or GitLab/Bitbucket)
+## 🛫 Deployment (Vercel)
 
-Import the project into Vercel
-
-Add Environment Variables in Vercel:
-
-NEXT_PUBLIC_SITE_URL
-
-RESEND_API_KEY
-
-EMAIL_TO
-
-EMAIL_FROM
-
-Deploy 🎉
-
-🧩 Troubleshooting
-Node version: ensure Node ≥ 20.19. Some packages warn on older minors.
-
-Emails not received:
-
-Check Resend dashboard logs
-
-On free tier, send to your own email or verify a domain
-
-Confirm EMAIL_FROM uses your verified domain
-
-Check spam/junk and allow time for first-time domain warmup
-
-Styling not applied:
-
-Make sure Tailwind is loaded via styles/globals.css
-
-Restart the dev server after editing Tailwind config/content
-
-Dynamic routes 404:
-
-Confirm the slug exists in lib/content.ts
-
-Rebuild after adding new slugs
-
-🤝 Contributing
-Issues and PRs are welcome.
-If you add features, try to keep the codebase consistent with the current stack (Next.js, Tailwind, shadcn/ui).
+1. Push to GitHub
+2. Import repo into Vercel
+3. Add Environment Variables in Vercel:
+   - `NEXT_PUBLIC_SITE_URL`
+   - `RESEND_API_KEY`
+   - `EMAIL_TO`
+   - `EMAIL_FROM`
+4. Deploy
