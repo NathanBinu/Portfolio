@@ -140,3 +140,11 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
    - `EMAIL_TO`
    - `EMAIL_FROM`
 4. Deploy
+
+## Acknowledgements
+
+- [Next.js](https://nextjs.org/) - The React Framework for the Web
+- [shadcn/ui](https://ui.shadcn.com/) - Beautifully designed components built with Radix UI and Tailwind CSS
+- [Radix UI](https://www.radix-ui.com/) - Unstyled, accessible components for building high‑quality design systems
+- [Tailwind CSS](https://tailwindcss.com/) - A utility-first CSS framework for rapid UI development
+- [Resend](https://resend.com/) - Email API for developers
