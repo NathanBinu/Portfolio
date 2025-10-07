@@ -46,7 +46,7 @@ styles/
 **Note**: Projects are read from `lib/content.ts` (and optionally `content/projects/*.json` if you split them).
 Skills shown on the About/Experience pages are also defined in `lib/content.ts`.
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
