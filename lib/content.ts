@@ -68,7 +68,7 @@ const projects: Project[] = [
     description: "Desktop application for parking bookings and admin management with real-time data sync.",
     longDescription:
       "A Java Swing client backed by a Spring Boot REST API, implementing secure authentication (Firebase Auth) and live data sync with Firestore. Built with strong OOP principles and design patterns, and quality-assured via JUnit test suites and Randoop-generated tests in a TDD workflow.",
-    image: "/YU_Parking_Image.jpg",
+    image: "/projects/yu_parking_image.jpg",
     technologies: [
       "Java",
       "TDD",
