@@ -137,26 +137,30 @@ export function Navigation() {
             </SheetTrigger>
 
             {/* ADDED: aria-label and a visually-hidden title to satisfy Radix Dialog a11y */}
-            <SheetContent side="right" className="w-[300px] sm:w-[400px]" aria-label="Navigation menu">
+            <SheetContent
+              side="right"
+              className="w-[80vw] sm:w-[400px] px-6 sm:px-8 pt-6 pb-8 p-safe"
+              aria-label="Navigation menu"
+            >
               <SheetHeader className="sr-only">
                 <SheetTitle>Navigation menu</SheetTitle>
               </SheetHeader>
 
-              <div className="flex flex-col space-y-4 mt-4">
+              <nav className="mt-2 flex flex-col gap-6">
                 {navigation.map((item) => (
                   <Link
                     key={item.name}
                     href={item.href}
                     onClick={() => setIsOpen(false)}
                     className={cn(
-                      "text-lg font-medium transition-colors hover:text-primary",
+                      "block pl-2 pr-6 py-3 text-xl font-medium transition-colors hover:text-primary",
                       pathname === item.href ? "text-primary" : "text-muted-foreground",
                     )}
                   >
                     {item.name}
                   </Link>
                 ))}
-              </div>
+              </nav>
             </SheetContent>
           </Sheet>
         </div>

@@ -11,8 +11,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
-import { Github, Linkedin, Mail, MapPin, Send } from "lucide-react"
-import Link from "next/link"
+import { CONTACT } from "@/content/contact"
+import { Calendar, Github, Linkedin, Mail, MapPin, MessageSquare, Send } from "lucide-react"
 import { useState } from "react"
 
 export default function ContactPage() {
@@ -73,6 +73,16 @@ export default function ContactPage() {
       [e.target.name]: e.target.value,
     }))
   }
+
+  const handleLinkedInDM = async () => {
+    try {
+      if (CONTACT.dmTemplate) await navigator.clipboard.writeText(CONTACT.dmTemplate)
+    } catch {
+      // clipboard can fail if blocked; ignore
+    }
+    window.open(CONTACT.linkedinProfile, "_blank", "noopener,noreferrer")
+  }
+
 
   return (
     <PageTransition>
@@ -252,11 +262,17 @@ export default function ContactPage() {
                 Prefer a different way to get in touch? Here are some alternatives
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button asChild variant="outline" size="lg">
-                  <Link href="/projects">View My Projects</Link>
+                {/* LinkedIn DM (copies template, opens your profile) */}
+                <Button size="lg" onClick={handleLinkedInDM}>
+                  <MessageSquare className="mr-2 h-5 w-5" />
+                  DM on LinkedIn
                 </Button>
+                {/* Calendly booking */}
                 <Button asChild variant="outline" size="lg">
-                  <Link href="/experience">See My Experience</Link>
+                  <a href={CONTACT.calendly} target="_blank" rel="noopener noreferrer">
+                    <Calendar className="mr-2 h-5 w-5" />
+                    Book a call
+                  </a>
                 </Button>
               </div>
             </ScrollReveal>
