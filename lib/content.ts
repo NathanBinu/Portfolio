@@ -107,7 +107,7 @@ const projects: Project[] = [
       "Jupyter Notebooks",
       "Matplotlib",
     ],
-    category: "Machine Learning Modeling",
+    category: "Machine Learning",
     featured: true,
     githubUrl: "https://github.com/NathanBinu/sentiment-analyzer",
     completedAt: "2025-06-20",
@@ -128,7 +128,7 @@ const projects: Project[] = [
       "Jupyter Notebooks",
       "Matplotlib"
     ],
-    category: "Machine Leaning Modeling",
+    category: "Machine Learning",
     featured: true,
     githubUrl: "https://github.com/example/weather-dashboard", // Has to be incorporated!!!!!!
     completedAt: "2025-07-23",
@@ -149,7 +149,7 @@ const projects: Project[] = [
       "shadcn/ui",
       "Radix UI"
     ],
-    category: "Website",
+    category: "Web Application",
     featured: false,
     githubUrl: "https://github.com/example/portfolio",
     liveUrl: "https://portfolio-demo.vercel.app",
@@ -171,7 +171,7 @@ const projects: Project[] = [
       "Uvicorn",
       "Joblib"
     ],
-    category: "Machine Leaning Modeling",
+    category: "Machine Learning",
     featured: false,
     githubUrl: "https://github.com/NathanBinu/Autonomous-ML-Agent",
     completedAt: "2025-09-10",
