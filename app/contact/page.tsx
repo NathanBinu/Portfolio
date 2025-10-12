@@ -351,7 +351,7 @@ export default function ContactPage() {
       // success
       setFormData({ name: "", email: "", subject: "", message: "" })
       setCompany("")
-      alert("Thanks! Your message was sent — I’ll get back to you soon.")
+      alert("Thank you! Your message was sent — I’ll get back to you soon.")
     } catch (err: any) {
       alert(err?.message || "Sorry, failed to send. Please try again.")
     } finally {
