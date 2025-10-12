@@ -26,9 +26,12 @@ export async function POST(req: Request) {
       return Response.json({ ok: false, error }, { status: 502 });
     }
 
-    // ✅ FIX: id lives at data?.id, not data.id
+    // FIX: id lives at data?.id, not data.id
     return Response.json({ ok: true, id: data?.id });
   } catch (err: any) {
     return Response.json({ ok: false, error: err.message }, { status: 500 });
   }
 }
+
+//-------------------------------------------------------------------------------------
+
